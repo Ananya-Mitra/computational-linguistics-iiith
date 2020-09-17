@@ -1,4 +1,4 @@
-const arrays=[];
+let arrays=[];
 let eng=[];
 let hin=[];
 var count=0;
@@ -6,10 +6,10 @@ var f_sentence="", flag="";
 var n=0;
 var word="";
 function choice(){
-
+  arrays=[];
 	count=0;
 	f_sentence="";
-  flag=""; word=""
+  flag=""; word="";
 	n=0;
  document.getElementById("wrap").innerHTML = "";
 	var reform = document.createElement("input");
@@ -18,6 +18,7 @@ reform.type = "button";
   reform.id = "rf"; 
   reform.onclick = function() {document.getElementById("format").innerHTML = "";
     document.getElementById("words").innerHTML = "";
+
     sent_b(arrays);};
   var foo4 = document.getElementById("wrap");  
   foo4.appendChild(reform);
@@ -40,7 +41,7 @@ reform.type = "button";
 		flag="eng"
 		randomEng(en);
 	}
-	else{
+	else if(ch =="Hindi"){
 		n=Math.floor(Math.random() * 7) + 1;
 		var hi=hin[n][1];
 		//document.getElementById("h").innerHTML = hin[n][1];
@@ -98,7 +99,7 @@ function sent_b(array) {
 	clearBox();
 	count=0;
 	for(i=0; i<array.length; i++){
-		add("button", array[i], array[i]);  
+		add("button", array[i], i);  
 
 }
 
@@ -176,11 +177,15 @@ view.id = "view_correct";
 
   		if (f_sentence == eng[n][i])
   		{
+        document.getElementById("answerw").innerHTML = "";
+        document.getElementById("checkstr").innerHTML = "";
+        document.getElementById("ca").innerHTML = "";
   			document.getElementById("answerc").innerHTML = "Correct answer!!";
   			break;
   		}
   		else
   		{
+        document.getElementById("answerc").innerHTML = "";
   			document.getElementById("answerw").innerHTML = "Wrong answer";
 
   			  var foo3 = document.getElementById("ca");  
@@ -218,12 +223,15 @@ view.id = "view_correct";
 
   		if (f_sentence == hin[n][i])
   		{
+        document.getElementById("answerw").innerHTML = "";
+        document.getElementById("checkstr").innerHTML = "";
+        document.getElementById("ca").innerHTML = "";
   			document.getElementById("answerc").innerHTML = "Correct answer!!";
   			break;
   		}
   		else
   		{
-  				
+  			document.getElementById("answerc").innerHTML = "";	
   			document.getElementById("answerw").innerHTML = "Wrong answer";
 
   			var foo3 = document.getElementById("ca");  
