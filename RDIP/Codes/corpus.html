@@ -2,24 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-<style>
-
-.wrapper{
-    text-align: center;
-} 
-</style>
+<link rel="stylesheet" href="corpus.css">
 	<script src="corpus.js"></script>
 </head>
 <body>
-
-<select name="lang" id="lang" onchange="choice()"> 
+	<br>
+	<h1>Test your linguistics!</h1>
+	<br>
+<div align="center">
+<select class="drop" name="lang" id="lang" onchange="choice()"> 
         <option value="none" selected disabled hidden> 
           ---Select Language--- 
       </option> 
         <option id="english" value="english">English</option> 
         <option id="hindi" value="hindi">Hindi</option>  
     </select>
-
+</div>
 <p id="disp_ins" align="CENTER"></p>
 
 
@@ -33,7 +31,20 @@
 <p id="format" align="CENTER"></p>
 <!--<p id="words" align="CENTER"></p>-->
 <div align="CENTER"><span id = "words"></span></div>
-<div class="wrapper"><input class="hide" type="button" id="rf" value="Re-form" ></input></div>
+<!--<div class="wrapper"><input class="hide" type="button" id="rf" value="Re-form the sentence" onclick="reform()"></input></div>-->
+<div class="wrap" id = "wrap" align="CENTER"></div>
+<br><br>
+<div class="checkstr" id = "checkstr" align="CENTER"></div>
+<br>
+<p id="checkstring" align="CENTER"></p>
+<br>
+<p id="answerc" align="CENTER"></p>
+<p id="answerw" align="CENTER"></p>
+<br>
+<div class="ca" id = "ca" align="CENTER"></div>
+<br>
+<p id="correctanswer" align="CENTER"></p>
+
 </body>
 </html>
 
