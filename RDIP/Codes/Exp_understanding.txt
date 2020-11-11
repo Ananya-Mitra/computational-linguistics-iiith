@@ -1,7 +1,5 @@
-Forming Sentences (Given experiment)
+Forming Sentences 
 
-Using Javascript, HTML and CSS, we have to replicate the given experiment. 
-We have to form complex sentences.
 
 Possible languages : Hindi, English
 
@@ -12,7 +10,7 @@ The experiment being on "Forming Sentences": there can be a couple of correct an
 Various buttons need to be placed such as "Check the correctness of the answer" -> Gives the statement "Correct" or "Wrong"
 
 If correct there should probably be an option that provides a new sentence(not visible currently in the sample provided).
-The English and Hindi Sentences are randomly chosen from a list of sentences. Every time English or Hindi is chosen, a new random English/Hindi Sentence comes into play. (This functionality is missing)
+The English and Hindi Sentences are randomly chosen from a list of sentences. Every time English or Hindi is chosen, a new random English/Hindi Sentence comes into play.
 
 
 If Wrong -> A show correct answer button should display the correct one. 
